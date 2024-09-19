@@ -10,6 +10,8 @@ La diversidad de información generada por la interacción de anfitriones y hué
 
 Este análisis exploratorio utilizará técnicas avanzadas de BI para visualizar tendencias, identificar patrones y comprender los factores que influyen en la ocupación de los alojamientos. Desde la temporada alta hasta las preferencias regionales, se examinarán diversos aspectos para desentrañar información valiosa. El objetivo final es proporcionar una base sólida para la toma de decisiones informada, permitiendo a los interesados tomar medidas estratégicas para mejorar la eficiencia operativa y la rentabilidad en el dinámico ecosistema de Airbnb.
 
+🙌
+
 ## Tablas iniciales
 
 Tabla rooms (Dimensión):
