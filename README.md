@@ -1,7 +1,11 @@
-# Airbnb ( Business Intelligence project )
-The goal is to optimize room availability, maximize revenue, and enhance the user experience.
+<h1 align="center">Airbnb (Business Intelligence project)</h1>
 
-![image](https://github.com/user-attachments/assets/f3d5bb67-84f2-4dab-a24c-3a4302bd092b)
+<p align='center'> The goal is to optimize room availability, maximize revenue, and enhance the user experience. </p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f3d5bb67-84f2-4dab-a24c-3a4302bd092b" alt="Airbnb Project Image" width="600" height="400">
+</p>
+
 
 
 En un mundo donde la economía compartida y la hospitalidad convergen, plataformas como Airbnb han transformado la forma en que las personas buscan y ofrecen alojamientos. En este contexto, maximizar la eficiencia y la rentabilidad se ha vuelto esencial tanto para los anfitriones como para la propia plataforma. El presente proyecto se enfoca en la exploración y análisis de datos relacionados con la disponibilidad de habitaciones en Airbnb, utilizando herramientas y conceptos de Business Intelligence (BI) para desentrañar patrones, identificar oportunidades y mejorar la toma de decisiones estratégicas.
