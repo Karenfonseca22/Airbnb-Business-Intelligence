@@ -1,0 +1,10 @@
+--- Función para crear una nueva columna utilizando fórmulas DAX para calcular el número total de huéspedes que un barrio podría recibir en un año (suponiendo que todas las habitaciones estén disponibles todos los días del año) según el número mínimo de noches permitidas para reservar cada habitación.
+
+Total_Reservas_Por_Barrio = 
+CALCULATE(
+    SUMX(
+        rooms_cr,
+        365 / rooms_cr[minimum_nights]
+    ),
+    ALLEXCEPT(rooms_cr, rooms_cr[neighbourhood_group])
+)
