@@ -1,3 +1,4 @@
+-- Vista creada apartir de la original de reviews, con correcciones de nulos, duplicados y caracteres especiales.
 SELECT
   CAST(id AS STRING) AS id,
   CAST(host_id AS STRING) AS host_id,
