@@ -47,6 +47,11 @@ Se encontraron nulos en la variable de number_of_reviews (20), last_review (1003
 
 Siendo esta una hora de reseñas, es algo esperado que se repita el host_id ya que se puede alquilar el mismo lugar muchas veces, de la misma manera el id, ya que el usuario puede haber estado en airbnb y hacer reservación en varios lugares y no tenemos la variable de fecha de reservación para verificar que haya sido la misma fecha, el mismo cliente y la misma habitación.
 
+# Formulas DAX
+
+
+
+
 Despues de limpiar caracteres especiales -- Se imputaron los reviews_per_month
 
 
