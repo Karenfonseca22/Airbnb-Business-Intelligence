@@ -118,6 +118,33 @@ RETURN
 
   ```
 
+# Analisis exploratorio
+
+
+
+# Conclusiones
+
+**1. Las zonas o barrios con mayor cantidad de hosts (usuarios en la plataforma) estan en Williamsbug, Harlem, Bushwick, Midtown, Greenpoint, Chelsea.**
+
+![image](https://github.com/user-attachments/assets/b938e541-49dd-40a5-a3e7-74801cf74f19)
+
+**2. Junio es el mes con mas reseñas y el tipo de habitación que mas obtiene es el private room.**
+
+![image](https://github.com/user-attachments/assets/aee34ba9-b709-4b16-9f31-b8473389ecc9)
+
+**3. El tipo de habitación más costoso es el entire home/apt seguido del private room. Sin embargo, hay muchas más habitaciones disponibles del tipo entire home/apt en comparación con private room.**
+
+ ![image](https://github.com/user-attachments/assets/1edee789-8275-4bd5-a60b-71ad106f0d76)
+
+**4. Hay una relación entre el porcentaje de habitaciones disponibles anualmente y las reseñas por mes, es decir entre mas habitaciones disponibles, mas reseñas**
+
+![image](https://github.com/user-attachments/assets/594cfd60-a1be-4040-805c-afdd2e8c24b9)
+
+**5. Existe un equilibrio entre la cantidad de habitaciones disponibles en Manhattan y el precio por noche, lo que lo convierte en una zona rentable. Por otro lado, el Bronx es la zona con menos habitaciones disponibles y menores ingresos.**
+
+![image](https://github.com/user-attachments/assets/5f6cd8ff-f830-42ca-a343-5afaeda1febb)
+
+
 
 
 
