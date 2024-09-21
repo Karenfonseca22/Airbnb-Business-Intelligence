@@ -49,7 +49,13 @@ Siendo esta una hora de reseñas, es algo esperado que se repita el host_id ya q
 
 # Formulas DAX
 
-- Cálculo de Reservas por Barrio (Como columna)
+- **Total habitación (Precio y número de días disponibles en un año) (Como columna)**
+
+```DAX
+Ingresos_Potenciales = [price] * [availability_365]
+```
+
+- **Cálculo de Reservas Anuales por Barrio (Como columna)**
 
 Esta es la fórmula DAX utilizada para calcular el número total de reservas que un barrio podría recibir en un año:
 
@@ -63,7 +69,27 @@ CALCULATE(
     ALLEXCEPT(rooms_cr, rooms_cr[neighbourhoodgroup])
 )
 
-- Porcentaje de habitaciones por barrio (Como medida)
+```
+
+- **Porcentaje de Habitaciones por Barrio (Como medida)** 
+
+Esta es la fórmula DAX utilizada para calcular el porcentaje de habitaciones disponibles por barrio:
+
+```DAX
+Porcentaje_Habitaciones_Disponibles = 
+VAR TotalHabitacionesBarrio = 
+    COUNT(rooms_cr[id])
+VAR HabitacionesDisponiblesBarrio = 
+    CALCULATE(
+        COUNT(rooms_cr[id]),
+        reviews_cr[availability_365] > 0
+    )
+RETURN
+    DIVIDE(HabitacionesDisponiblesBarrio, TotalHabitacionesBarrio, 0) * 100
+
+  ```
+
+
 
 
 
