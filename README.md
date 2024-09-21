@@ -49,10 +49,20 @@ Siendo esta una hora de reseñas, es algo esperado que se repita el host_id ya q
 
 # Formulas DAX
 
+- Cálculo de Reservas por Barrio
 
+Esta es la fórmula DAX utilizada para calcular el número total de reservas que un barrio podría recibir en un año:
 
+```DAX
+Total_Reservas_Por_Barrio = 
+CALCULATE(
+    SUMX(
+        rooms_cr,
+        365 / rooms_cr[minimum_nights]
+    ),
+    ALLEXCEPT(rooms_cr, rooms_cr[neighbourhoodgroup])
+)
 
-Despues de limpiar caracteres especiales -- Se imputaron los reviews_per_month
 
 
 
