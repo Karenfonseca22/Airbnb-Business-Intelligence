@@ -120,6 +120,14 @@ RETURN
 
 # Analisis exploratorio
 
+![image](https://github.com/user-attachments/assets/c823594d-c66f-4648-a40f-900cd3e0ee0c)
+
+![image](https://github.com/user-attachments/assets/377649b8-f062-448e-848b-b676082e9d41)
+
+![image](https://github.com/user-attachments/assets/a587600c-7dc1-45e8-aeb0-e14554d37665)
+
+![image](https://github.com/user-attachments/assets/4d359058-258d-4277-b223-1907dcbf1ba8)
+
 
 
 # Conclusiones
@@ -145,7 +153,27 @@ RETURN
 ![image](https://github.com/user-attachments/assets/5f6cd8ff-f830-42ca-a343-5afaeda1febb)
 
 
+# Recomendaciones
 
+**Zonas con mayor cantidad de hosts:**
+
+*Recomendación:* Fomentar estrategias de marketing dirigidas a Manhattan para atraer más usuarios. Ofrecer incentivos para las personas nuevas en la plataforma que estan siendo hosts en las areas top 3.
+
+**Junio como el mes con más reseñas y predominancia del private room:**
+
+*Recomendación:* Implementar campañas promocionales en junio para aumentar la visibilidad de los private rooms. También sería beneficioso incentivar a los hosts para que ofrezcan descuentos o promociones especiales durante este mes.
+
+**Tipo de habitación más costoso:**
+
+*Recomendación:* Evaluar la posibilidad de ajustar los precios de los private rooms para hacerlos más competitivos. Además, se podrían ofrecer paquetes o experiencias adicionales para entire home/apt que justifiquen su precio y atraigan más reservas.
+
+**Relación entre habitaciones disponibles y reseñas:**
+
+*Recomendación:* Monitorear la oferta de habitaciones y ajustar la estrategia de marketing en función del número de reseñas. Incentivar a los hosts a mantener un alto nivel de disponibilidad para maximizar sus oportunidades de recibir reseñas.
+
+**Equilibrio en Manhattan y bajos ingresos en el Bronx:**
+
+*Recomendación:* Promover el desarrollo de la oferta de habitaciones en el Bronx, mediante campañas de marketing que destaquen las ventajas de hospedarse allí. También se podrían implementar programas de apoyo a los hosts en esa área, como asesoramiento sobre precios y marketing.
 
 
 
