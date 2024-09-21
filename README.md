@@ -3,7 +3,7 @@
 <p align='center'> The goal is to optimize room availability, maximize revenue, and enhance the user experience. </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f3d5bb67-84f2-4dab-a24c-3a4302bd092b" alt="Airbnb Project Image" width="600" height="400">
+  <img src="https://github.com/user-attachments/assets/f3d5bb67-84f2-4dab-a24c-3a4302bd092b" alt="Airbnb Project Image" width="400" height="300">
 </p>
 
 
@@ -14,11 +14,10 @@ La diversidad de información generada por la interacción de anfitriones y hué
 
 Este análisis exploratorio utilizará técnicas avanzadas de BI para visualizar tendencias, identificar patrones y comprender los factores que influyen en la ocupación de los alojamientos. Desde la temporada alta hasta las preferencias regionales, se examinarán diversos aspectos para desentrañar información valiosa. El objetivo final es proporcionar una base sólida para la toma de decisiones informada, permitiendo a los interesados tomar medidas estratégicas para mejorar la eficiencia operativa y la rentabilidad en el dinámico ecosistema de Airbnb.
 
-🙌
 
-## Tablas iniciales
+## Tablas iniciales 🙌
 
-Tabla rooms (Dimensión):
+**Tabla rooms (Dimensión):**
 id: un identificador único para cada habitación.
 name: el nombre del anuncio de Airbnb
 neighbourhood: acrónimo del barrio en el que se encuentra el anuncio de Airbnb neighbourhoodgroup: barrio en el que se encuentra el anuncio de Airbnb
@@ -27,11 +26,11 @@ longitude: la coordenada de longitud del anuncio de Airbnb
 roomtype: el tipo de habitación que ofrece el anuncio de Airbnb
 minimum_nights: el número mínimo de noches necesarias para reservar el anuncio de Airbnb
 
-Tabla hosts (Dimensión):
+**Tabla hosts (Dimensión):**
 hostid : un identificador único para cada host.
 hostname: el nombre del anfitrión del anuncio de Airbnb
 
-Tabla reviews (Hechos):
+**Tabla reviews (Hechos):**
 id: un identificador único para cada habitación.
 hostid : un identificador único para cada host.
 price: el precio por noche del anuncio de Airbnb
@@ -43,13 +42,39 @@ availability365: la cantidad de días que el anuncio de Airbnb está disponible 
 
 # Procesar y preparar base de datos
 
-- Para la tabla de hosts:
+**Duplicados:** Se gestionaron los duplicados únicamente en la tabla de hosts, ya que contenía las variables host_id y host_name. En las demás tablas no se identificaron duplicados relevantes que requirieran tratamiento. Dado que estamos trabajando con reseñas, es de esperar que el host_id se repita, ya que un mismo lugar puede ser alquilado varias veces. De manera similar, el id del usuario puede repetirse, ya que un mismo cliente puede haber hecho reservas en varios lugares de Airbnb. Además, no contamos con la variable de fecha de reservación para verificar si se trata de la misma fecha, cliente y habitación.
 
-- Para la tabla de reviews:
-- 
-Se encontraron nulos en la variable de number_of_reviews (20), last_review (10039), reviews_per_month (10019), availability_365 (156), sin embargo no se van a eliminar en el procesamiento y limpieza de datos.
+**Valores null:** Se encontraron nulos en la variable de number_of_reviews (20), last_review (10039), reviews_per_month (10019), availability_365 (156), sin embargo no se van a eliminar en el procesamiento y limpieza de datos. Se hizo imputación para la variable reviews_per_month, debido a su distribución se imputo con la mediana.
 
-Siendo esta una hora de reseñas, es algo esperado que se repita el host_id ya que se puede alquilar el mismo lugar muchas veces, de la misma manera el id, ya que el usuario puede haber estado en airbnb y hacer reservación en varios lugares y no tenemos la variable de fecha de reservación para verificar que haya sido la misma fecha, el mismo cliente y la misma habitación.
+![image](https://github.com/user-attachments/assets/ff277dc4-8323-4737-8d53-c0f7ed9bf8dd)
+
+**Caracteres especiales:** En todas las tablas habian datos desordenados y discrepantes. Se limpiaron, comprobando y verificando en BigQuery. Este es un ejemplo de formula para remover caracteres especiales:
+
+```SQL
+SELECT
+  CAST(id AS STRING) AS id,
+  name,
+  neighbourhood,
+  neighbourhood_group,
+  latitude,
+  longitude,
+  room_type,
+  minimum_nights
+FROM
+  `airbnb-436116.alojamiento.rooms`
+WHERE
+  NOT REGEXP_CONTAINS(CAST(id AS STRING), r'[^0-9]')  -- Permitir solo números
+  AND NOT REGEXP_CONTAINS(neighbourhood, r'[^A-Za-z]')  -- Permitir solo letras
+  AND NOT REGEXP_CONTAINS(neighbourhood_group, r'[^A-Za-z]')  -- Permitir solo letras
+
+```
+
+# Tablas a Power BI
+
+![image](https://github.com/user-attachments/assets/393511e8-6c3b-41e0-817c-3d506e5a85e0) 
+
+Se estableció una relación de uno a varios entre las tablas de dimensión y la tabla de hechos. Las tablas de dimensión son *hosts* y *rooms*, mientras que la tabla de hechos es *reviews*, ya que esta contiene tanto el *id* como el *id_host*, lo que permite establecer las relaciones entre ellas.
+
 
 # Formulas DAX
 
