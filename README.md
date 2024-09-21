@@ -175,6 +175,11 @@ RETURN
 
 *Recomendación:* Promover el desarrollo de la oferta de habitaciones en el Bronx, mediante campañas de marketing que destaquen las ventajas de hospedarse allí. También se podrían implementar programas de apoyo a los hosts en esa área, como asesoramiento sobre precios y marketing.
 
+# Dashboard
+
+![image](https://github.com/user-attachments/assets/29dce927-b8da-455e-8b14-78d0e7162e76)
+
+
 
 
 
