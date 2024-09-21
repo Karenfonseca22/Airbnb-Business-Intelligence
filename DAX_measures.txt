@@ -1,0 +1,10 @@
+Porcentaje_Habitaciones_Disponibles = 
+VAR TotalHabitacionesBarrio = 
+    COUNT(rooms_cr[id])
+VAR HabitacionesDisponiblesBarrio = 
+    CALCULATE(
+        COUNT(rooms_cr[id]),
+        reviews_cr[availability_365] > 0
+    )
+RETURN
+    DIVIDE(HabitacionesDisponiblesBarrio, TotalHabitacionesBarrio, 0) * 100
