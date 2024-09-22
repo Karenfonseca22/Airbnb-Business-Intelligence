@@ -179,10 +179,11 @@ RETURN
 
 ![image](https://github.com/user-attachments/assets/29dce927-b8da-455e-8b14-78d0e7162e76)
 
+
 # Presentación y Video
 
-Link presentación
-Link video
+[Link presentación](https://www.canva.com/design/DAGRbf6GHr4/1y0wao_QYD5BxJxWlc0pSg/edit?utm_content=DAGRbf6GHr4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)  
+[Link video](https://www.loom.com/share/e4147d67a8394d5f8e0f73767948f93b?sid=05076b1b-262d-4f00-81de-f14a61460682)
 
 
 
